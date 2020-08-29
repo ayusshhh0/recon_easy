@@ -4,6 +4,9 @@
 # Tool to automate the whole sudomain and directory bruteforcing part
 #Date Created -> 
 
+apt-get install amass  
+apt-get install ffuf
+
 while getopts ":d:" userinput; do
 	case "$userinput" in
 		d) domain=${OPTARG};;
