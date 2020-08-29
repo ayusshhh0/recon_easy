@@ -18,11 +18,13 @@ then
 	echo "please input domain with -d domain.txt"
 fi
  
-amass enum -d $domain --passive | httprobe -o subdomain.txt; 
+amass enum -d $domain --passive -o subdomain.txt; 
 
 for url in ` cat subdomain.txt`; do ffuf -c -w /usr/share/wordlists/dirb/common.txt -u $url/FUZZ; done >> result.txt
 
 echo "Recon partially done"
+echo "Go check the result.txt"
+cat result.txt
 exit 1
 
 
