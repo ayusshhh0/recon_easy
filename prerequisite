@@ -1,0 +1,4 @@
+If amass installed. Good Start Hacking and if not <br>
+root@kali:~ apt-get install amass <br>
+If ffuf installed. Good Start Hacking and if not <br>
+root@kali:~ apt-get install ffuf
